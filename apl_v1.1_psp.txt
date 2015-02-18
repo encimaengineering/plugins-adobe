@@ -1,0 +1,62 @@
+/*
+ * Utility Function: apl v1.1
+ */
+/*********************************************************************
+* DESCRIPTION:
+*	Appends a value to any delimited list with the option to always
+*		append or append only a new value using a case sensitive or
+*		case insensitive string comparison.
+*
+* CONFIGURATION VARIABLES:
+*	None
+*
+* PARAMETERS:
+*	l = list to append to
+*	v = new value to append to list
+*	d = list delimiter
+*	u = (optional) unique value mode. Accepted values are: 
+*		[0=no unique check, 1=case sensitive, 2=case insensitive]
+*
+* RETURNS:
+*	- A delimited list
+*
+* SAMPLE CALLS:
+*	s.events=s.apl(s.events,"event1",",",2)
+*********************************************************************/
+
+/********************************************************************
+ *
+ * Main Plug-in code (should be in Plug-ins section)
+ *
+ *******************************************************************/
+/*
+ * Plugin Utility: apl v1.1
+ */
+s.apl=new Function("l","v","d","u",""
++"var s=this,m=0;if(!l)l='';if(u){var i,n,a=s.split(l,d);for(i=0;i<a."
++"length;i++){n=a[i];m=m||(u==1?(n==v):(n.toLowerCase()==v.toLowerCas"
++"e()));}}if(!m)l=l?l+d+v:v;return l");
+
+/********************************************************************
+ *
+ * Commented example of how to use this is doPlugins function
+ *
+ *******************************************************************/
+ 
+	Not Applicable - Utility function only
+
+/********************************************************************
+ *
+ * Config variables (should be above doPlugins section)
+ *
+ *******************************************************************/
+
+	None
+
+/********************************************************************
+ *
+ * Utility functions that may be shared between plug-ins (name only)
+ *
+ *******************************************************************/
+ 
+	s.split
