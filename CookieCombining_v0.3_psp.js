@@ -1,5 +1,5 @@
 /*
- * Plugin Cookie Combining Utility v0.3
+ * Plugin Cookie Combining Utility 
  */
 /*********************************************************************
 * DESCRIPTION:  Combines SiteCatalyst cookies to the fewest number possible
@@ -10,7 +10,7 @@
 * PARAMETERS:
 * None 
 *
-*
+*More changes for testing
 * RETURNS:
 * None (combines cookies when possible)
 *
